@@ -96,7 +96,7 @@ namespace Itec.Models
             return this.Internals.ToString();
         }
 
-        public IList<string> GetMemberNames() {
+        public IReadOnlyList<string> GetMemberNames() {
             var names = new List<string>();
             foreach (var pair in this._Internals) names.Add(pair.Key);
             return names;
@@ -192,9 +192,15 @@ namespace Itec.Models
             return new Enumerator(this);
         }
 
-       
-
-
         #endregion
+
+        public bool Equals(IReadonlyModel other)
+        {
+            if (other == this) return true;
+            var j = other as ReadonlyJsonModel;
+            if (j == null) return false;
+            return this._Internals.Equals(j._Internals);
+        }
+
     }
 }

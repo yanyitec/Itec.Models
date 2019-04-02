@@ -9,7 +9,10 @@ namespace Itec.Models
     /// 只读数据模型的抽象
     /// 可以得到
     /// </summary>
-    public interface IReadonlyModel : System.Dynamic.IDynamicMetaObjectProvider//, IEnumerable<KeyValuePair<string, object>>
+    public interface IReadonlyModel 
+        : System.Dynamic.IDynamicMetaObjectProvider
+        ,IEquatable<IReadonlyModel>
+        //, IEnumerable<KeyValuePair<string, object>>
     {
         //bool HasChanges { get; }
         /// <summary>
@@ -53,6 +56,6 @@ namespace Itec.Models
         /// <returns></returns>
         string ToJSON();
 
-        IList<string> GetMemberNames();
+        IReadOnlyList<string> GetMemberNames();
     }
 }

@@ -5,6 +5,17 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Itec.Models", "Itec.Models\Itec.Models.csproj", "{06CE194C-7190-481B-97CC-C0EE7C289203}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4A9BB99-9955-4E7A-8BAB-569A74FD40BD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Itec.Metas", "..\Itec.Metas\Itec.Metas\Itec.Metas.csproj", "{E4268C90-021A-4BE2-B3DE-2B8D34970EB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Itec.Entities", "Itec.Entities\Itec.Entities.csproj", "{F8E160EA-BA73-47A0-AB4C-37D229035290}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +26,14 @@ Global
 		{06CE194C-7190-481B-97CC-C0EE7C289203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06CE194C-7190-481B-97CC-C0EE7C289203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06CE194C-7190-481B-97CC-C0EE7C289203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4268C90-021A-4BE2-B3DE-2B8D34970EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4268C90-021A-4BE2-B3DE-2B8D34970EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4268C90-021A-4BE2-B3DE-2B8D34970EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4268C90-021A-4BE2-B3DE-2B8D34970EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E160EA-BA73-47A0-AB4C-37D229035290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E160EA-BA73-47A0-AB4C-37D229035290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E160EA-BA73-47A0-AB4C-37D229035290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E160EA-BA73-47A0-AB4C-37D229035290}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

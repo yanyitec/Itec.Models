@@ -66,17 +66,25 @@ namespace Itec.Models
             return this.Current.ToJSON();
         }
 
-        public IList<string> GetMemberNames()
+        public IReadOnlyList<string> GetMemberNames()
         {
-            var names = this.Current.GetMemberNames();
+            var nms = this.Current.GetMemberNames();
+            
             if (this.Super != null) {
+                var names = nms as List<string>;
+                if (names == null) {
+                    names = new List<string>();
+                    foreach (var n in nms) names.Add(n);
+                }
                 var superNames = this.Super.GetMemberNames();
                 foreach (var name in superNames) {
                     if (names.Contains(name)) names.Add(name);
                 }
             }
-            return names;
+            return nms;
         }
+
+        
 
         #region dynamic
         public override IEnumerable<string> GetDynamicMemberNames()
@@ -127,5 +135,13 @@ namespace Itec.Models
 
 
         #endregion
+
+        public bool Equals(IReadonlyModel other)
+        {
+            if (other == this) return true;
+            if (this.Current.Equals(other) ) return true;
+            if (this.Super != null || this.Super.Equals(other)) return true;
+            return false;
+        }
     }
 }
